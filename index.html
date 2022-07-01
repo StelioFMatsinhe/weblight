@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>TME_Education</title>
+<style>
+
+    header {
+        font: 32pt gabriola;
+        
+        background-color: rgb(255,255,255);
+        color: rgb(0,0,0);
+        line-height: 50px;
+        float: inline-start;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+
+   body {
+
+color: rgb(255, 255, 255);
+font:normal 16pt garamond;
+   background-color: rgba(174, 213, 58, 0.692);
+
+  
+
+ 
+                }  
+
+   input {
+
+    font: normal 13pt ;
+   }
+
+
+   
+</style> 
+
+ </head>
+ 
+
+ 
+ <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js">
+
+
+ </script>
+
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js">
+
+
+</script>
+
+    <script>
+
+                                const firebaseConfig = {
+                                apiKey: "AIzaSyBfyrKDtjYahWwVqgQQAcJa_8hB-xHDMqo",
+                             authDomain: "controle-de-lampada.firebaseapp.com",
+                                projectId: "controle-de-lampada",
+                             storageBucket: "controle-de-lampada.appspot.com",
+                             messagingSenderId: "701164317800",
+                                appId: "1:701164317800:web:f542168d9439cf02c89fdd",
+                            measurementId: "G-RT9P3WN9M8"
+                            }
+
+                            // Initialize Firebase
+                            firebase.initializeApp(firebaseConfig)
+
+                            function ledOn() {
+                                    firebase.database().ref('SALA').set({estado: 'ligada'})
+
+
+                            }
+
+                            function ledOff() {
+                                    firebase.database().ref('SALA').set({ESTADO: 'desligada'})
+
+
+                            }
+
+                                        </script>
+
+
+
+<script src="app.js" defer>
+
+
+</script>
+
+
+
+
+
+
+ <body> 
+<header align="center"><strong>TME EDUCATION</strong></header>
+
+
+<h3 align="center">Curso de Arduino nivel II (IoT)</h3>
+<h3 align="center">Controle Remoto de iluminação</h3>
+
+
+<h3></h3>
+
+
+ <button align="center" type="button" value="DESLIGAR" height="30px" onclick="ledOff()">DESLIGAR</button>
+
+
+<button align="center" type="button" value="LIGAR" height="25px" onclick="ledOn()">LIGAR</button>
+
+
+
+<div class="footer-copyright">
+        <div align= 'center'>
+            © <span>2022</span> Stelio Francisco MAtsinhe
+        </div>
+</div>
+
+
+
+</body>
+
+</html> 
